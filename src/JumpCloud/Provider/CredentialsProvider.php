@@ -9,7 +9,9 @@ namespace JumpCloud\Provider;
  */
 class CredentialsProvider implements CredentialsProviderInterface
 {
-    /** @var string */
+    /**
+     * @var string
+     */
     private $key;
 
     /**

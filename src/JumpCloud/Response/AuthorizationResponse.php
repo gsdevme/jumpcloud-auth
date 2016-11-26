@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace JumpCloud\Response;
 
@@ -34,7 +34,7 @@ class AuthorizationResponse implements ResponseInterface
     /**
      * @return bool
      */
-    public function isAuthorized()
+    public function isAuthorized(): bool
     {
         return $this->authorized;
     }

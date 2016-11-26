@@ -1,8 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 
-namespace JumpCloud\Factory;
+namespace JumpCloud\Response\Factory;
 
-use GuzzleHttp\Psr7\Response;
+use Psr\Http\Message\ResponseInterface as HttpResponseInterface;
+use JumpCloud\Response\ResponseInterface;
 use JumpCloud\Response\AuthorizationResponse;
 
 /**
@@ -12,10 +13,11 @@ use JumpCloud\Response\AuthorizationResponse;
 class AuthorizationResponseFactory implements ResponseFactoryInterface
 {
     /**
-     * @param Response $response
-     * @return AuthorizationResponse
+     * @param HttpResponseInterface $response
+     *
+     * @return ResponseInterface
      */
-    public function create(Response $response)
+    public function create(HttpResponseInterface $response): ResponseInterface
     {
         if ($response->getStatusCode() === 200) {
             return new AuthorizationResponse($response, AuthorizationResponse::AUTHORISED);

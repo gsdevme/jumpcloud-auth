@@ -1,6 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
-namespace JumpCloud\Factory;
+namespace JumpCloud\Response\Factory;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use GuzzleHttp\Psr7\Response;
@@ -18,7 +18,7 @@ class SystemsResponseFactory implements ResponseFactoryInterface
      * @param Response $response
      * @return SystemsResponse
      */
-    public function create(Response $response)
+    public function create(Response $response): SystemsResponse
     {
         $jsonDecoder = new JsonDecoder();
         $collection = new ArrayCollection();

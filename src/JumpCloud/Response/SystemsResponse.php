@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace JumpCloud\Response;
 
@@ -28,7 +28,7 @@ class SystemsResponse implements ResponseInterface
     /**
      * @return ArrayCollection
      */
-    public function getCollection()
+    public function getCollection(): ArrayCollection
     {
         return $this->collection;
     }
