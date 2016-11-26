@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace JumpCloud\Response;
 
@@ -8,7 +8,6 @@ class ExceptionResponse implements ResponseInterface
     private $body;
 
     /**
-     * Response constructor.
      * @param $message
      * @param $code
      */
@@ -23,7 +22,10 @@ class ExceptionResponse implements ResponseInterface
         return $this->body;
     }
 
-    public function getStatusCode()
+    /**
+     * {@inheritdoc}
+     */
+    public function getStatusCode(): int
     {
         return $this->code;
     }

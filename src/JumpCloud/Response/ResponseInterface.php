@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace JumpCloud\Response;
 
@@ -9,6 +9,6 @@ interface ResponseInterface
     /**
      * @return int
      */
-    public function getStatusCode();
+    public function getStatusCode(): int;
 
 }

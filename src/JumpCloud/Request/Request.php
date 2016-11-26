@@ -2,7 +2,7 @@
 
 namespace JumpCloud\Request;
 
-use JumpCloud\Factory\ResponseFactoryInterface;
+use JumpCloud\Response\Factory\ResponseFactoryInterface;
 
 class Request implements RequestInterface
 {

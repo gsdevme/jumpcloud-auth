@@ -1,18 +1,21 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace JumpCloud\Response;
 
 use GuzzleHttp\Psr7\Response as HttpResponse;
+use Psr\Http\Message\StreamInterface;
 
 trait ResponseTrait
 {
-    /** @var HttpResponse */
+    /**
+     * @var HttpResponse
+     */
     protected $response;
 
     /**
-     * @return \GuzzleHttp\Psr7\Stream|\Psr\Http\Message\StreamInterface
+     * @return StreamInterface
      */
-    public function getBody()
+    public function getBody(): StreamInterface
     {
         return $this->response->getBody();
     }
@@ -20,7 +23,7 @@ trait ResponseTrait
     /**
      * @return int
      */
-    public function getStatusCode()
+    public function getStatusCode(): int
     {
         return $this->response->getStatusCode();
     }

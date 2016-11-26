@@ -3,7 +3,7 @@
 namespace JumpCloud\Operation;
 
 use JumpCloud\Request\AuthorizationRequestInterface;
-use JumpCloud\Factory\AuthorizationResponseFactory;
+use JumpCloud\Response\Factory\AuthorizationResponseFactory;
 use JumpCloud\Request\Request;
 use JumpCloud\Request\RequestInterface;
 

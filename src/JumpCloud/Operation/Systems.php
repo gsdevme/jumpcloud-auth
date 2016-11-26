@@ -2,7 +2,7 @@
 
 namespace JumpCloud\Operation;
 
-use JumpCloud\Factory\SystemsResponseFactory;
+use JumpCloud\Response\Factory\SystemsResponseFactory;
 use JumpCloud\Fields\NoopFields;
 use JumpCloud\Request\Request;
 use JumpCloud\Request\RequestInterface;
